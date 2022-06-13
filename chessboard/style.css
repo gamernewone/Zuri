@@ -1,0 +1,28 @@
+table,th,td {
+	border-collapse: collapse;
+	padding: 5px;
+	box-shadow: 5px 5px 20px;
+	border: 3px solid rgb(204, 35, 35);
+	
+    margin-left: auto;
+    margin-right: auto;
+}
+	
+
+body{
+	background-color: azure;
+}
+
+.black{
+	background-color: rgb(153, 71, 71);
+}
+
+.white{
+	background-color:beige;
+}
+
+#ou{
+	font-size: large;
+	padding: 20px;
+	font-family:cursive;
+}
