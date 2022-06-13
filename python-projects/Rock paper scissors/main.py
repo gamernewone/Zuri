@@ -2,7 +2,7 @@ import random
 
 gamechoice = ['Rock', 'Paper', 'Scissors']
 
-#### Init
+#### Init ####
 
 def init():
     player = gamechoice[playerchoice()]
@@ -14,12 +14,12 @@ def init():
 
 
 
-# Player choice
+#### Player choice
 
 def playerchoice():
     while True:
     
-        choice = input("choose between Rock(r), paper(p), and scissors(s): ")
+        choice = (input("choose between Rock(r), paper(p), and scissors(s): ")).lower()
         
         if choice == "r":
             return (0)
@@ -35,21 +35,15 @@ def computerchoice():
     return random.choice(gamechoice)
 
 
-### Comparaison ######
+### Actual game ###
 
 def compare(one, two):
-    if (one == "Rock" and two =="Scissors"):
-        print("Player wins")
-    elif (two == "Rock" and one =="Scissors"):
-        print("Cpu wins")
-    elif (one == "Paper" and two =="Scissors"):
-        print("Cpu wins")
-    elif (two == "Paper" and one =="Scissors"):
-        print("Player wins")
-    elif (one == "Paper" and two =="Rock"):
-        print("Player wins")
-    elif (two == "Paper" and one =="Rock"):
-        print("Cpu wins")
+    winner = (('Rock','Scissors'), ('Paper','Rock'), ('Scissors','Paper'))
+
+    if (one,two) in winner:
+        print("player wins")
+    elif(two,one) in winner:
+        print("Computer wins")
     else:
         print(" It's a draw, replay\n")
         init()

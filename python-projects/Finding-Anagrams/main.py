@@ -8,7 +8,7 @@ def find_anagram(word, anagram):
 
   # [assignment] Add your code here
 
-    if (sorted(word) != sorted(anagram)):
+    if (sorted(word.lower().replace(" ", "")) != sorted(anagram.lower().replace(" ", ""))):
         return False
     else:
         return True
